@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CircleImageViewWithGap">
+        <attr name="me_border_width" />
+        <attr name="me_border_color" />
+        <attr name="me_border_gap" format="dimension" />
+    </declare-styleable>
+</resources>

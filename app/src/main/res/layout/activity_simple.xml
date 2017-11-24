@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="better.anr.constraint.SimpleActivity">
+
+    <ImageView
+        android:id="@+id/iv_header_bg"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/mine_header_bg"
+        app:layout_constraintTop_toBottomOf="@+id/nav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <anr.better.com.anrdemo.ui.CircleImageViewWithGap
+        android:id="@+id/iv_user"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        android:layout_marginLeft="24dp"
+        android:src="@mipmap/kotlin"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_header_bg"
+        app:layout_constraintStart_toStartOf="@+id/iv_header_bg"
+        app:layout_constraintTop_toTopOf="@+id/iv_header_bg" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:src="@mipmap/mine_birth_icon"
+        app:layout_constraintEnd_toEndOf="@+id/iv_user"
+        app:layout_constraintLeft_toLeftOf="@+id/iv_user"
+        app:layout_constraintTop_toTopOf="@+id/iv_user" />
+
+    <Space
+        android:id="@+id/space_base_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_header_bg"
+        app:layout_constraintLeft_toLeftOf="@+id/iv_user"
+        app:layout_constraintRight_toRightOf="@+id/iv_header_bg"
+        app:layout_constraintTop_toTopOf="@+id/iv_header_bg" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18sp"
+        android:layout_marginLeft="20dp"
+        android:text="Kotlin"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/space_base_line"
+        app:layout_constraintLeft_toRightOf="@+id/iv_user" />
+
+    <View
+        android:id="@+id/vertical_line"
+        android:layout_width="2dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="4dp"
+        android:background="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_user"
+        app:layout_constraintEnd_toEndOf="@+id/space_base_line"
+        app:layout_constraintStart_toEndOf="@+id/iv_user" />
+
+
+    <TextView
+        android:id="@+id/jifen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="TextView1"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_user"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_line" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Textview2"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/jifen"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_user"
+        app:layout_constraintStart_toEndOf="@+id/vertical_line" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="20"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/jifen"
+        app:layout_constraintLeft_toLeftOf="@+id/jifen"
+        app:layout_constraintRight_toRightOf="@+id/jifen" />
+
+    <View
+        android:id="@+id/nav"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@android:color/holo_orange_dark" />
+
+</android.support.constraint.ConstraintLayout>
+
+
